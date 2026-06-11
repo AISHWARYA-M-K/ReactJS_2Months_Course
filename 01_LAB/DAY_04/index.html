@@ -5,8 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Protfolio</title>
     <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
         .nav{
-            background-color: #333;
+            background-color: #2E4052;
             color: #fff;
             padding: 10px 20px;
         }
@@ -28,13 +34,14 @@
         }
         .home{
             height: 500px;
-            background:url(https://img.freepik.com/premium-photo/gradient-kit-website-background-web3-gradient-background-collection_203617-54.jpg) no-repeat center center/cover;
-            border-radius: 10px;
+            background: #C84B31;
+            border-radius: 0;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items:flex-end;
             padding:60px;
             margin-bottom: 20px;
+            margin: 0px auto;
         }
         .home
             h1, .home h2 {
@@ -43,24 +50,26 @@
                 margin-bottom: 10px;
             }
         .home-content{
-            background: url(https://tse1.mm.bing.net/th/id/OIP._-p4DzO777bFyw5EgDU6mwHaHa?cb=thfvnextfalcon2&rs=1&pid=ImgDetMain&o=7&rm=3) no-repeat center center/cover;
+            background: rgba(0, 0, 0, 0.7);
             border-radius: 10px;
             padding: 40px;
-            
-        
         }
-
+        nav a{
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
     </style>
 </head>
 <body>
-    <header class="nav" >
+    <header class="navbar" >
         <div class="nav-container" >
-        <h1>WELCOME TO MY PORTFOLIO</h1>
+        <h1>PORTFOLIO</h1>
         <nav class="nav-links">
-            <a href="#">home</a>
-            <a href="#">My projects</a>
-            <a href="#">About Me</a>
-            <a href="#">contact</a>
+            <a href="#home">Home</a>
+            <a href="#My projects">My Projects</a>
+            <a href="#About Me">About Me</a>
+            <a href="#contact">Contact</a>
         </nav>
         </div>
     </header>
@@ -69,7 +78,7 @@
     <div class="home-content">
        
      <h1>Hi There!</h1>
-     <h1>My name is Aishwarya K</h1>
+     <h1>Aishwarya K</h1>
      <h2>Web Developer</h2>
      <button>View My Work</button>
 
