@@ -6,7 +6,7 @@
     <title>My Protfolio</title>
     <style>
         body{
-            font-family: Arial, sans-serif;
+            font-family:'Courier New', Courier, monospace;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
@@ -14,17 +14,16 @@
         .nav{
             background-color: #2E4052;
             color: #fff;
-            padding: 10px 20px;
+            padding: 10px ;
         }
         .nav-container{
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: center; 
         }
-        .nav-links{
+        .nav-links{ 
             display: flex;
             gap: 20px;
-            color: #fff;
         }
         .home, .projects, .about, .portfolio, .skills{
             padding: 40px 20px;
@@ -37,7 +36,7 @@
             background: #C84B31;
             border-radius: 0;
             display: flex;
-            justify-content: center;
+            justify-content:left;
             align-items:flex-end;
             padding:60px;
             margin-bottom: 20px;
@@ -45,16 +44,30 @@
         }
         .home
             h1, .home h2 {
-                font-size: 48px;
+                font-size: 50px;
                 color: #fff;
                 margin-bottom: 10px;
             }
         .home-content{
             background: rgba(0, 0, 0, 0.7);
             border-radius: 10px;
-            padding: 40px;
+            padding: 30px 250px 50px 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
         }
-        nav a{
+        button{
+            padding: 10px 20px;
+            font-size: 18px;
+            color: #1f0a0a;
+            background-color: #F0E5D8;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        
+        nav a {
             color: #fff;
             text-decoration: none;
             font-size: 18px;
@@ -62,7 +75,7 @@
     </style>
 </head>
 <body>
-    <header class="navbar" >
+    <header class="nav" >
         <div class="nav-container" >
         <h1>PORTFOLIO</h1>
         <nav class="nav-links">
