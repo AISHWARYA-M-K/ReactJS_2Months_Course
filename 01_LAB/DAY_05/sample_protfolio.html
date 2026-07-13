@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Portfolio</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f4f4f4;
+    color:#333;
+}
+
+header{
+    background:#0d6efd;
+    color:white;
+    text-align:center;
+    padding:60px 20px;
+}
+
+header h1{
+    font-size:40px;
+}
+
+header p{
+    margin-top:10px;
+    font-size:18px;
+}
+
+section{
+    max-width:1000px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+h2{
+    color:#0d6efd;
+    margin-bottom:15px;
+}
+
+.about,
+.skills,
+.projects,
+.contact{
+    background:white;
+    padding:25px;
+    margin-bottom:20px;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.skill-list{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.skill{
+    background:#0d6efd;
+    color:white;
+    padding:8px 15px;
+    border-radius:20px;
+}
+
+.project-card{
+    background:#f8f9fa;
+    padding:15px;
+    border-left:5px solid #0d6efd;
+    margin-bottom:15px;
+}
+
+.contact a{
+    color:#0d6efd;
+    text-decoration:none;
+}
+
+footer{
+    text-align:center;
+    background:#222;
+    color:white;
+    padding:15px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Haleso</h1>
+    <p>Web Developer | React Developer | Content Creator</p>
+</header>
+
+<section>
+
+    <div class="about">
+        <h2>About Me</h2>
+        <p>
+            Hi! I'm Haleso. I am passionate about web development
+            and creating modern websites using HTML, CSS,
+            JavaScript, and React JS.
+        </p>
+    </div>
+
+    <div class="skills">
+        <h2>Skills</h2>
+        <div class="skill-list">
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">React JS</span>
+            <span class="skill">Java</span>
+            <span class="skill">GitHub</span>
+        </div>
+    </div>
+
+    <div class="projects">
+        <h2>Projects</h2>
+
+        <div class="project-card">
+            <h3>Student Management System</h3>
+            <p>Developed using Java and MySQL to manage student records.</p>
+        </div>
+
+        <div class="project-card">
+            <h3>E-Commerce Website</h3>
+            <p>Built using HTML, CSS, JavaScript, and React.</p>
+        </div>
+
+        <div class="project-card">
+            <h3>Portfolio Website</h3>
+            <p>Personal portfolio showcasing projects and skills.</p>
+        </div>
+    </div>
+
+    <div class="contact">
+        <h2>Contact</h2>
+        <p>Email: yourmail@example.com</p>
+        <p>GitHub: <a href="#">github.com/yourusername</a></p>
+        <p>LinkedIn: <a href="#">linkedin.com/in/yourprofile</a></p>
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 Haleso. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

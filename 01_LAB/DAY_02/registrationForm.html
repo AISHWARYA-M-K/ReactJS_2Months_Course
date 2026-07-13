@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body{
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            padding:0;
+            margin:0;
+            display:flex;
+            justify-content:center;
+            align-items: center;
+            height: 100vh;
+        }
+        .main{
+            background:#fff;
+            border-radius:20px;
+            box-shadow:0 0 20px rgba(0,0,0,0.2);
+            padding: 20px;
+            width: 300;
+        }
+        .main h2{
+            color: #ac0456;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main">
+        <h2>Registration Form</h2>
+    <form>
+        <label for="First">First Name: </label>
+        <input type ="text" id ="First" name="first" placeholder="jaya" required><br>
+
+        <label for="Second">Second Name: </label>
+        <input type ="text" id="Second" name="second" placeholder="shree" required><br>
+        
+        <label for="email">E-mail: </label>
+        <input type ="text" id="email"  name="email" placeholder="jaya987@gmail.com" required><br>
+
+        <label for="password">Password: </label>
+        <input type ="Password"  
+        name="password" 
+        id="password"
+        pattern="^(?=.*\d)(?=.*[a-zA-Z])(?=.*[^a-zA-Z0-9])\S{8,}$"
+        title="Password must contain atleast one number, 
+        one uppercase and one lowercase,one symbol,atleast 8 characters long"
+        required><br>
+
+        <label for="Repassword">Re-Type Password: </label>
+        <input type ="Password" id ="Repassword" name="repassword" required><br>
+
+        <label for ="mobile" >Contact</label>
+        <input type = "text" id="mobile" name="contact" maxlength="10" required><br>
+"
+        <label for ="gender"> Gender: </label>
+        <select id="gender">
+            <option value = "">Select Gender</option>
+            <option value = "male">Male</option>
+            <option value = "female">Female</option>
+            <option value = "others">Others</option>
+        </select ><br>
+
+        <button type="submit">Submit</button>
+
+    </form>
+    </div>
+</body>
+</html>
