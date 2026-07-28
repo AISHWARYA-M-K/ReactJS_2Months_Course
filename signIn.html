@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+</head>
+<body>
+        <section class="container">
+        <div class="login">
+            <h1>Sign In</h1>
+            <form class="form">
+                <div class="area">
+                    <label for="username">Username:</label>
+                    <input type="text" type="email" id="username" placeholder="Username or Email" title="Enter username or email" name="username" required>
+                </div>
+                <div class="area">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" placeholder="Enter your Password" title="Enter password" required>
+                </div>
+                 <div class="area">
+                    <label for="password">Re-enter Password:</label>
+                    <input type="password" id="password" placeholder="Enter your Password" title="Enter password" required>
+                </div>
+                <button type="button" id="result-btn">Sign In</button>
+                <p id="error"></p>
+            </form>
+        </div>
+        <div id="login_result">
+            <h1 id="resultPage"></h1>
+        </div>
+    </section>
+
+      <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        #error {
+            color: red;
+        }
+        .container{
+            border: 1px solid;
+            height: 400px;
+            width: 400px;
+            padding: 20px;
+            margin-top: 200px;
+            margin-left:700px;
+            margin-right: 350px;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+        }
+
+        .login h1{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            margin-top:10px;
+        }
+
+        .login form{
+            height: 200px;
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            padding: 25px;
+        }
+
+        .login .area{
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .login label{
+            font-weight: 600;
+        }
+
+        .login input{
+            padding: 10px;
+            border: 1px solid #999;
+            border-radius: 6px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .login button{
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            background: #333;
+            color: #fff;
+            cursor: pointer;
+            transform: translateX(-5px);
+        }
+        </style>
+</body>
+</html>
