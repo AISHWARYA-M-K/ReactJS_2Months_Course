@@ -1,0 +1,141 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Container{
+    background-color: rgb(91, 102, 201);
+    padding: 10px;
+    color:aliceblue;
+    height: 40px;
+    border: 2px solid rgb(90, 99, 178);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    margin: 15px 20px 15px 20px;
+    box-shadow: 0px 10px 15px rgba(68, 71, 216, 0.719);
+}
+
+.Container h1{
+    font-size: 30px;
+    margin-left: 20px;
+    border: 1px solid rgb(13, 13, 13);          
+    display:flex;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.nav ul{
+    list-style: none;
+    display: flex;
+    padding: 10px;
+    margin: 20px;
+    gap:20px;
+    border: 1px solid rgb(13, 13, 13);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav a{
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 20px;
+}
+
+.nav a:hover{
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.hero{
+    border: 2px solid rgb(126, 120, 120);
+    height: 500px;
+    border-radius: 20px;
+    margin: 10px 20px 20px 20px;
+    display: flex;
+    justify-content: center;
+    /* background-color: rgb(87, 86, 86); */
+    background: linear-gradient(to right, #c1c1c1, #ffffff);
+    box-shadow: 0px 10px 15px rgba(0.5, 0.5, 0.5, 0.5);
+}
+
+.hero:hover{
+    background: linear-gradient(to right, #ffffff, #c1c1c1);
+}
+
+.hero-content{
+    border:1px solid black;
+    height: 200px;
+    margin: 40px 20px 40px 60px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 20px;
+}
+
+.hero-content button:hover{
+    background-color: rgb(12, 12, 12);
+    color: rgb(255, 255, 255);
+}
+
+.hero-content h1{
+    font-size: 30px;
+    color: rgb(11, 11, 11);
+}
+
+.hero-content p{
+    font-size: 20px;
+    color: rgb(16, 16, 16);
+}
+
+.hero-content button{
+    padding: 10px;
+    border-radius:10px;
+}
+
+.Vocabulary{
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    border: 2px solid rgb(241, 165, 165);
+    background-color: rgb(241, 127, 127);
+    border-radius: 20px;
+    box-shadow: 0px 10px 15px rgba(243, 128, 128, 0.5);
+    margin: 20px;
+}
+
+/* .Words:hover{
+    background-color: rgb(252, 59, 59);
+} */
+
+.Vocabulary-content{
+    border: 1px solid black;
+    padding:50px;
+    height: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin:auto;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
+}
+
+.Grammar{
+    height:400px;
+    display: flex;
+    justify-content: center;
+    border: 2px solid rgb(207, 182, 90);
+    background-color: rgb(194, 191, 51);
+    margin: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 15px rgba(218, 162, 19, 0.5);
+}
+/* .Grammar:hover{
+    background-color: rgb(255, 225, 0);
+} */
+
+.Grammar-content{
+    border: 1px solid black;
+    padding:50px;
+    height: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin:auto;
+}

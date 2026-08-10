@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript User Input Example</title>
+</head>
+<body>
+    <h2>Check Number Type</h2>
+    <button onclick="checkNumber()">Enter a Number</button>
+
+    <script>
+        function checkNumber() {
+            // Get user input as a string
+            let input = prompt("Enter a number:");
+
+            // Validate input: check if it's a number
+            if (input === null) {
+                alert("You cancelled the input.");
+                return;
+            }
+
+            // Convert to number
+            let num = Number(input);
+
+            if (isNaN(num)) {
+                alert("Invalid input. Please enter a valid number.");
+                return;
+            }
+
+            // Apply condition
+            if (num > 0) {
+                alert(num + " is positive.");
+            } else if (num < 0) {
+                alert(num + " is negative.");
+            } else {
+                alert("The number is zero.");
+            }
+        }
+    </script>
+</body>
+</html>
+
+
