@@ -1,122 +1,79 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import React, { useState } from 'react';
+import OtpInput from './components/OtpInput';
+import Timer from './components/Timer';
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
+  const [generatedOtp, setGeneratedOtp] = useState('');
+  const [userOtp, setUserOtp] = useState(['', '', '', '', '', '']);
+  const [timer, setTimer] = useState(0);
+  const [status, setStatus] = useState('');
+
+  // Generate a random 6-digit number string
+  const handleGenerate = () => {
+    const randomOtp = Math.floor(100000 + Math.random() * 900000).toString();
+    setGeneratedOtp(randomOtp);
+    setUserOtp(['', '', '', '', '', '']); // Clear existing inputs
+    setTimer(30); // Reset countdown timer to 30s
+    setStatus('');
+  };
+
+  // Verify entered OTP against the generated one
+  const handleVerify = () => {
+    const enteredOtp = userOtp.join('');
+
+    if (timer === 0) {
+      setStatus('❌ OTP has expired. Please request a new one.');
+      return;
+    }
+
+    if (enteredOtp === generatedOtp) {
+      setStatus('✅ Success! OTP Verified.');
+    } else {
+      setStatus('❌ Incorrect OTP. Try again.');
+    }
+  };
 
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    <div>
+      <h1>OTP Generator</h1>
 
-      <div className="ticks"></div>
+      <button onClick={handleGenerate}>
+        {generatedOtp ? 'Resend OTP' : 'Generate OTP'}
+      </button>
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+      {generatedOtp && (
+        <>
+          {/* Demo helper showing current OTP */}
+          <div style={{ marginBottom: '20px', color: '#666' }}>
+            Generated Code: {generatedOtp}
+          </div>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
-  )
+          {/* 6-digit Inputs */}
+          <OtpInput userOtp={userOtp} setUserOtp={setUserOtp} />
+
+          {/* Countdown Timer */}
+          <Timer timer={timer} setTimer={setTimer} />
+
+          {/* Verification Button */}
+          <button
+            onClick={handleVerify}
+            style={{
+              backgroundColor: timer > 0 ? '#16a34a' : '#94a3b8',
+              color: '#fff',
+              border: 'none',
+              borderRadius: '6px',
+              cursor: 'pointer',
+              padding: '10px 20px',
+              marginTop: '20px'
+            }}
+          >
+            Verify OTP
+          </button>
+        </>
+      )}
+
+      {/* Result feedback message */}
+      {status && <p>{status}</p>}
+    </div>
+  );
 }
-
-export default App
