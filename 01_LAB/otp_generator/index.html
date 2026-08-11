@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OTP Generator & Verifier</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="otp-card">
+    <h2>OTP Verification</h2>
+
+    <!-- Trigger Button -->
+    <button id="generateBtn" class="btn primary-btn">Generate OTP</button>
+
+    <!-- Demo Banner showing generated OTP -->
+    <div id="demoDisplay" class="demo-display hidden">
+      Demo OTP: <strong id="generatedOtpText">------</strong>
+    </div>
+
+    <!-- OTP Input Section -->
+    <div id="otpContainer" class="otp-container hidden">
+      <div class="input-group">
+        <input type="text" maxlength="1" class="otp-box" />
+        <input type="text" maxlength="1" class="otp-box" />
+        <input type="text" maxlength="1" class="otp-box" />
+        <input type="text" maxlength="1" class="otp-box" />
+        <input type="text" maxlength="1" class="otp-box" />
+        <input type="text" maxlength="1" class="otp-box" />
+      </div>
+
+      <!-- Timer & Expiry Display -->
+      <p id="timerText" class="timer-text"></p>
+
+      <!-- Verification Button -->
+      <button id="verifyBtn" class="btn success-btn" disabled>Verify OTP</button>
+    </div>
+
+    <!-- Feedback Message -->
+    <p id="statusMessage" class="status-message"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
